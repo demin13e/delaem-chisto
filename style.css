@@ -1,0 +1,491 @@
+/* =========================
+   Сброс
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f7f9fc;
+    color:#222;
+    line-height:1.6;
+}
+
+/* =========================
+Контейнер
+========================= */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+Шапка
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#fff;
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#2563eb;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+.call-btn{
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.call-btn:hover{
+    background:#1d4ed8;
+}
+
+/* =========================
+Главный экран
+========================= */
+
+.hero{
+    padding:90px 0;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.badge{
+    display:inline-block;
+    background:#dbeafe;
+    color:#2563eb;
+    padding:8px 18px;
+    border-radius:50px;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.hero h1{
+    font-size:54px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.hero ul{
+    list-style:none;
+    margin-bottom:35px;
+}
+
+.hero li{
+    margin-bottom:14px;
+    font-size:18px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.primary,
+.secondary{
+    text-decoration:none;
+    padding:15px 28px;
+    border-radius:12px;
+    font-weight:700;
+}
+
+.primary{
+    background:#2563eb;
+    color:white;
+}
+
+.primary:hover{
+    background:#1d4ed8;
+}
+
+.secondary{
+    border:2px solid #2563eb;
+    color:#2563eb;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:24px;
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+
+/* =========================
+Секции
+========================= */
+
+section{
+    padding:90px 0;
+}
+
+section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+}
+
+/* =========================
+Карточки
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    transition:.35s;
+    text-align:center;
+}
+
+.card .icon{
+    font-size:60px;
+    margin-bottom:20px;
+    display:block;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+/* =========================
+Обо мне
+========================= */
+
+.about-content{
+    display:flex;
+    gap:70px;
+    align-items:center;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:25px;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h3{
+    color:#2563eb;
+    margin:15px 0;
+}
+
+/* =========================
+Отзывы
+========================= */
+
+.reviews .card p{
+    margin:20px 0;
+}
+
+/* =========================
+Контакты
+========================= */
+
+.contacts{
+    text-align:center;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+Футер
+========================= */
+
+footer{
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:35px 0;
+}
+
+/* =========================
+Мобильная версия
+========================= */
+
+@media(max-width:900px){
+
+.hero-content{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
+.about-content{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+}/* ==========================
+   Этапы работы
+========================== */
+
+.steps-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.step{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.step-number{
+    width:70px;
+    height:70px;
+    margin:auto;
+    margin-bottom:20px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* ==========================
+   Галерея
+========================== */
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+}
+
+.gallery-grid img{
+
+width:100%;
+
+height:320px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.gallery-grid img:hover{
+
+transform:scale(1.04);
+
+}
+.floating-call{
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+width:65px;
+
+height:65px;
+
+background:#2563eb;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+border-radius:50%;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+.floating-call:hover{
+
+transform:scale(1.1);
+
+}
+/* ==========================
+   Lightbox
+========================== */
+
+.lightbox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0,0,0,.9);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    width:auto;
+    height:auto;
+
+    max-width:90vw;
+    max-height:90vh;
+
+    object-fit:contain;
+}
+}
+
+.close{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:white;
+    font-size:50px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.contact-buttons a{
+    min-width:220px;
+    text-align:center;
+    transition:.3s;
+}
+
+.contact-buttons a:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
